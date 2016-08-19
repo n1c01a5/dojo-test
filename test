@@ -1,0 +1,17 @@
+#!/bin/bash
+
+TAX=11;
+
+printf 'Price? '
+read price
+
+if ! [[ $price =~ ^[0-9]+$ ]]  
+then
+   echo "error: price must be a number"
+elif [ $price -lt 0 ]
+then
+  echo "price must be positive"
+else
+  total=`echo "$price * 1.1" | bc`
+  echo $total
+fi
