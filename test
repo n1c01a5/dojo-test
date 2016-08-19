@@ -1,7 +1,5 @@
 #!/bin/bash
 
-TAX=11;
-
 printf 'Price? '
 read price
 
